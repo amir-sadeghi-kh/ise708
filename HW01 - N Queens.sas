@@ -3,7 +3,6 @@ proc optmodel;
    set <num> myset = {1..10};
    var x{myset, myset} binary;
 
-   /* minimize the variance of the portfolio's total return */
    maximize f = sum{i in 1..10, j in 1..10}x[i,j];
 
    /* subject to the following constraints */
